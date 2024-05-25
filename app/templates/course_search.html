@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Search</title>
+    <link rel="stylesheet" href="{% static 'assets/css/logsign.css' %}" />
+</head>
+<body>
+    {% block content %}
+    <h2>Course Search</h2>
+    <form method="get" action="{% url 'course_search' %}">
+        <input type="text" name="query" placeholder="Search by course code, name, or instructor">
+        <input type="submit" value="Search">
+    </form>
+    {% if courses %}
+        <ul>
+            {% for course in courses %}
+                <li>{{ course.name }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No courses found.</p>
+    {% endif %}
+    {% endblock  %}
+</body>
+</html>

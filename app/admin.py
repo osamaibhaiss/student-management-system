@@ -1,4 +1,4 @@
-from .models import Instructor,Course,CourseSchedule,Student,StudentsRegs,StudentsRegs
+from .models import *
 from django.contrib import admin
 admin.site.register(Instructor)
 admin.site.register(Course)
