@@ -8,4 +8,6 @@ urlpatterns = [
     path('signup/', views.signup, name='signup'),
     path('dash/', views.dashBoard, name='dash'),
     path('course_search/', views.course_search, name='course_search'),
+    path('register_courses/', views.reg_cs, name='register_courses'),
+    path('mycourse/',views.Mycourses,name='mycs'),
 ]

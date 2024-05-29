@@ -27,8 +27,7 @@ class CourseSchedule(models.Model):
     start_time = models.TimeField()
     end_time = models.TimeField()
     room_no = models.CharField(max_length=10)
-    def __str__(self):
-     return self.name
+    
 
 
 class Student(models.Model):
@@ -50,4 +49,4 @@ class StudentsRegs(models.Model):
     id = models.AutoField(primary_key=True)
     student_id = models.ForeignKey(Student, on_delete=models.CASCADE)
     course_id = models.ForeignKey(Course, on_delete=models.CASCADE)
-
+    
